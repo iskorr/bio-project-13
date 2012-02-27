@@ -1,0 +1,12 @@
+In order to fetch a project, follow these steps (input into terminal from your workspace):
+
+	mkdir bio-project-13
+	cd bio-project-13
+	git remote add origin git@github.com:iskorr/bio-project-13.git
+	git pull -u origin master
+
+This is it - you have the latest version of the repository. To commit input:
+
+	git add <filename> // or alternatively 'git add .'
+	git commit -m "Your description goes here"
+	git push	// sometimes (in case of conflicts, you'll need to pull before pushing)

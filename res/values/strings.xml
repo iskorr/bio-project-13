@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, DNAManipulatorActivity!</string>
     <string name="app_name">DNA Manipulator</string>
     <string name="Start">Start</string>
     <string name="Options">Options</string>
     <string name="Credits">Credits</string>
     <string name="Tutorial">Tutorial</string>
     <string name="ReferenceTable">Reference Table</string>
-    <string name="ribosome"> Ribosome Translation (Level3)</string>
-    <string name="dnapolymerase">DNA Polymerase Replication (Level1)</string>
-    <string name="rnapolymerase">RNA Polymerase Transcription (Level2)</string>
+    <string name="ribosome">Ribosome Translation (Level 3)</string>
+    <string name="dnapolymerase">DNA Polymerase Replication (Level 1)</string>
+    <string name="rnapolymerase">RNA Polymerase Transcription (Level 2)</string>
     <string name="restart">Restart</string>
     <string name="Menu">Menu</string>
-    <string name="Setting">Setting</string>
+    <string name="Setting">Settings</string>
 </resources>
 

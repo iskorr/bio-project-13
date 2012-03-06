@@ -3,61 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dna_background"
-    android:gravity="bottom|center|right|top"
-    android:orientation="vertical" 
-    android:baselineAligned="false">
-
+    android:orientation="vertical">
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.89" >
-
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:src="@drawable/dna_polymerase" />
-
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:src="@drawable/rna_transcription" />
-
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ribosome" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ribosome" />      
     </LinearLayout>
-
+
     <LinearLayout
         android:id="@+id/TopLine"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_weight="0.04"
-        android:gravity="center_horizontal|right" >
-
+        android:layout_weight="0.04">
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
             android:text="@string/dnapolymerase" />
-
         <Button
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/rnapolymerase" />
-
         <Button
             android:id="@+id/button1"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:text="@string/ribosome" />
+            android:layout_weight="1"
+            android:text="@string/ribosome" />      
     </LinearLayout>
-
+
     <LinearLayout
         android:id="@+id/BottomLine"
         android:layout_width="match_parent"
@@ -65,15 +61,14 @@
         android:layout_weight="0.29"
         android:gravity="bottom|left"
         android:orientation="vertical" >
-
         <ImageButton
             android:id="@+id/imageButton1"
-            android:layout_width="50dp"
-            android:layout_height="44dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/back" />
-
+            android:background="@null"
+            android:src="@drawable/back_button" />
     </LinearLayout>
-
+    
 </LinearLayout>

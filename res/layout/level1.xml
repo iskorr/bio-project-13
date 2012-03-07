@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageButton
+        android:id="@+id/T_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/A_button"
+        android:layout_alignBottom="@+id/A_button"
+        android:layout_marginLeft="65dp"
+        android:contentDescription="@string/placeholder"
+        android:background="@drawable/gene_c" />
+
+    <ImageButton
+        android:id="@+id/G_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/T_button"
+        android:layout_alignBottom="@+id/A_button"
+        android:layout_marginLeft="65dp"
+        android:contentDescription="@string/placeholder"
+        android:background="@drawable/gene_c" />
+
+    <ImageButton
+        android:id="@+id/C_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/G_button"
+        android:layout_alignBottom="@+id/A_button"
+        android:layout_marginLeft="65dp"
+        android:contentDescription="@string/placeholder"
+        android:background="@drawable/gene_c" />
+
+    <ImageButton
+        android:id="@+id/A_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="60dp"
+        android:contentDescription="@string/placeholder"
+        android:background="@drawable/gene_c" />
+
+    <ImageView
+        android:id="@+id/gene1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/A_button"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/gene_t"
+        android:contentDescription="@string/placeholder" />
+    
+    <ImageView
+        android:id="@+id/gene2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/gene1"
+        android:layout_marginLeft="65dp"
+        android:layout_alignTop="@+id/gene1"
+        android:src="@drawable/gene_t"
+        android:visibility="invisible"
+        android:contentDescription="@string/placeholder" />
+    
+    <ImageView
+        android:id="@+id/gene3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/gene2"
+        android:layout_marginLeft="65dp"
+        android:layout_alignTop="@+id/gene1"
+        android:src="@drawable/gene_t"
+        android:visibility="invisible"
+        android:contentDescription="@string/placeholder" />
+    
+    <ImageView
+        android:id="@+id/gene4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/gene3"
+        android:layout_marginLeft="65dp"
+        android:layout_alignTop="@+id/gene1"
+        android:src="@drawable/gene_t"
+        android:visibility="invisible"
+        android:contentDescription="@string/placeholder" />
+
+</RelativeLayout>

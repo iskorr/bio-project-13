@@ -7,7 +7,6 @@
     android:baselineAligned="false">
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.89" >
@@ -35,7 +34,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/TopLine"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="0.04">
@@ -60,7 +58,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/BottomLine"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.29"

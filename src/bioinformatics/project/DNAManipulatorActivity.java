@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 public class DNAManipulatorActivity extends Activity {
 	
 	/* This is our probable set of variables to pass back to the game levels */
-	//private int[] settings_array = {1,0};
+	private int[] settings_array = {1,0};
 	
     /** Called when the activity is first created. */
     @Override
@@ -58,6 +58,13 @@ public class DNAManipulatorActivity extends Activity {
     public void initialiseLevelSelector() {
     	setContentView(R.layout.level_selector);
     	setBackToMainButton();
+    	final Button level1 = (Button) findViewById(R.id.level1_button);
+    	level1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				
+			}
+		});
     }
     
     public void initialiseHelpMenu() {
@@ -68,6 +75,7 @@ public class DNAManipulatorActivity extends Activity {
     public void initialiseTutorialPage() {
     	setContentView(R.layout.tutorial_page);
     	setBackToMainButton();
+    	// TODO List of tutorials
     }
     
     public void initialiseSettingsMenu() {

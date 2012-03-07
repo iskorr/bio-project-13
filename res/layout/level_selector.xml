@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dna_background"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.89" >
+        <ImageView
+            android:id="@+id/imageview_level1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/dna_polymerase"
+            android:contentDescription="@string/placeholder" />
+        <ImageView
+            android:id="@+id/imageview_level2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/rna_transcription" 
+            android:contentDescription="@string/placeholder" />
+        <ImageView
+            android:id="@+id/imageview_level3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ribosome"
+            android:contentDescription="@string/placeholder" />      
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TopLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0.04">
+        <Button
+            android:id="@+id/level1_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/dnapolymerase" />
+        <Button
+            android:id="@+id/level2_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rnapolymerase" />
+        <Button
+            android:id="@+id/level3_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/ribosome" />      
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.29"
+        android:gravity="bottom|left"
+        android:orientation="vertical" >
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:src="@drawable/back_button" 
+            android:contentDescription="@string/placeholder"/>
+    </LinearLayout>
+    
+</LinearLayout>

@@ -41,39 +41,43 @@ public final class R {
         public static final int translation=0x7f02001b;
     }
     public static final class id {
-        public static final int BottomLine=0x7f05000d;
-        public static final int LinearLayout1=0x7f050000;
-        public static final int TopLine=0x7f05000c;
-        public static final int button1=0x7f050002;
-        public static final int button2=0x7f050003;
-        public static final int button3=0x7f050004;
-        public static final int button4=0x7f050005;
-        public static final int button5=0x7f050006;
-        public static final int imageButton1=0x7f05000e;
-        public static final int imageView1=0x7f050009;
-        public static final int imageView2=0x7f05000a;
-        public static final int imageView3=0x7f05000b;
-        public static final int linearLayout1=0x7f050008;
-        public static final int linearLayout2=0x7f050001;
-        public static final int startup_button=0x7f050007;
+        public static final int BottomLine=0x7f050009;
+        public static final int LinearLayout1=0x7f05000a;
+        public static final int TopLine=0x7f050005;
+        public static final int back_button=0x7f050000;
+        public static final int help_button=0x7f05000c;
+        public static final int imageview_level1=0x7f050002;
+        public static final int imageview_level2=0x7f050003;
+        public static final int imageview_level3=0x7f050004;
+        public static final int level1_button=0x7f050006;
+        public static final int level2_button=0x7f050007;
+        public static final int level3_button=0x7f050008;
+        public static final int linearLayout1=0x7f050001;
+        public static final int play_button=0x7f05000b;
+        public static final int settings_button=0x7f05000d;
+        public static final int startup_button=0x7f05000f;
+        public static final int tutorial_button=0x7f05000e;
     }
     public static final class layout {
-        public static final int gameview=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int menu=0x7f030002;
+        public static final int help_menu=0x7f030000;
+        public static final int level_selector=0x7f030001;
+        public static final int main_menu=0x7f030002;
+        public static final int settings_menu=0x7f030003;
+        public static final int startup=0x7f030004;
+        public static final int tutorial_page=0x7f030005;
     }
     public static final class string {
-        public static final int Credits=0x7f040003;
-        public static final int Menu=0x7f04000a;
-        public static final int Options=0x7f040002;
-        public static final int ReferenceTable=0x7f040005;
-        public static final int Setting=0x7f04000b;
-        public static final int Start=0x7f040001;
-        public static final int Tutorial=0x7f040004;
         public static final int app_name=0x7f040000;
-        public static final int dnapolymerase=0x7f040007;
-        public static final int restart=0x7f040009;
-        public static final int ribosome=0x7f040006;
-        public static final int rnapolymerase=0x7f040008;
+        public static final int credits=0x7f040002;
+        public static final int dnapolymerase=0x7f040006;
+        public static final int help=0x7f040009;
+        public static final int options=0x7f040001;
+        public static final int placeholder=0x7f04000b;
+        public static final int play=0x7f040008;
+        public static final int referencetable=0x7f040004;
+        public static final int ribosome=0x7f040005;
+        public static final int rnapolymerase=0x7f040007;
+        public static final int settings=0x7f04000a;
+        public static final int tutorial=0x7f040003;
     }
 }

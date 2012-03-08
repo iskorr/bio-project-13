@@ -71,17 +71,18 @@ public final class R {
         public static final int gene5_ans=0x7f05000f;
         public static final int gene6=0x7f05000a;
         public static final int gene6_ans=0x7f050010;
-        public static final int help_button=0x7f050018;
-        public static final int imageview_level1=0x7f050011;
-        public static final int imageview_level2=0x7f050012;
-        public static final int imageview_level3=0x7f050013;
-        public static final int level1_button=0x7f050014;
-        public static final int level2_button=0x7f050015;
-        public static final int level3_button=0x7f050016;
-        public static final int play_button=0x7f050017;
-        public static final int settings_button=0x7f050019;
-        public static final int startup_button=0x7f05001b;
-        public static final int tutorial_button=0x7f05001a;
+        public static final int help_button=0x7f050019;
+        public static final int imageview_level1=0x7f050012;
+        public static final int imageview_level2=0x7f050013;
+        public static final int imageview_level3=0x7f050014;
+        public static final int level1_button=0x7f050015;
+        public static final int level2_button=0x7f050016;
+        public static final int level3_button=0x7f050017;
+        public static final int play_button=0x7f050018;
+        public static final int settings_button=0x7f05001a;
+        public static final int startup_button=0x7f05001c;
+        public static final int time=0x7f050011;
+        public static final int tutorial_button=0x7f05001b;
     }
     public static final class layout {
         public static final int help_menu=0x7f030000;
@@ -107,6 +108,7 @@ public final class R {
         public static final int ribosome=0x7f040005;
         public static final int rnapolymerase=0x7f040007;
         public static final int settings=0x7f04000a;
+        public static final int timer=0x7f04000f;
         public static final int tutorial=0x7f040003;
     }
 }

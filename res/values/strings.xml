@@ -15,5 +15,6 @@
     <string name="level1">DNA Polymerase Replication</string>
     <string name="level2">RNA Polymerase Transcription</string>
     <string name="level3">Ribosome Translation</string>
+    <string name="timer">0:00</string>
 </resources>
 

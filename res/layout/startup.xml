@@ -13,7 +13,7 @@
         android:layout_marginBottom="30dp"
         android:layout_centerHorizontal="true"
         android:background="@null"
-        android:src="@drawable/ic_launcher_play"
+        android:src="@drawable/play_button"
         android:contentDescription="@string/placeholder"/>
 
 </RelativeLayout>  

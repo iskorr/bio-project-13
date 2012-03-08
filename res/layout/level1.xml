@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent" 
+    android:background="@drawable/level1_background">
 
     <ImageButton
         android:id="@+id/T_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/A_button"
+        android:layout_marginLeft="65dp"
         android:layout_toRightOf="@+id/A_button"
-        android:layout_alignBottom="@+id/A_button"
-        android:layout_marginLeft="65dp"
+        android:background="@null"
         android:contentDescription="@string/placeholder"
-        android:background="@drawable/gene_c" />
-
-    <ImageButton
-        android:id="@+id/G_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/T_button"
-        android:layout_alignBottom="@+id/A_button"
-        android:layout_marginLeft="65dp"
-        android:contentDescription="@string/placeholder"
-        android:background="@drawable/gene_c" />
+        android:src="@drawable/tbutton" />
 
     <ImageButton
         android:id="@+id/C_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/G_button"
         android:layout_alignBottom="@+id/A_button"
         android:layout_marginLeft="65dp"
+        android:layout_toRightOf="@+id/T_button"
+        android:background="@null"
         android:contentDescription="@string/placeholder"
-        android:background="@drawable/gene_c" />
+        android:src="@drawable/cbutton" />
+
+    <ImageButton
+        android:id="@+id/G_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/A_button"
+        android:layout_marginLeft="65dp"
+        android:layout_toRightOf="@+id/C_button"
+        android:background="@null"
+        android:contentDescription="@string/placeholder" 
+        android:src="@drawable/gbutton" />
 
     <ImageButton
         android:id="@+id/A_button"
@@ -39,51 +43,134 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="60dp"
+        android:background="@null"
         android:contentDescription="@string/placeholder"
-        android:background="@drawable/gene_c" />
+        android:src="@drawable/abutton" />
 
     <ImageView
         android:id="@+id/gene1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/A_button"
-        android:layout_marginTop="65dp"
-        android:src="@drawable/gene_t"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/base_t"
         android:contentDescription="@string/placeholder" />
-    
+
     <ImageView
         android:id="@+id/gene2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/gene1"
-        android:layout_marginLeft="65dp"
         android:layout_alignTop="@+id/gene1"
-        android:src="@drawable/gene_t"
-        android:visibility="invisible"
-        android:contentDescription="@string/placeholder" />
-    
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene1"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t" />
+
     <ImageView
         android:id="@+id/gene3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/gene2"
-        android:layout_marginLeft="65dp"
         android:layout_alignTop="@+id/gene1"
-        android:src="@drawable/gene_t"
-        android:visibility="invisible"
-        android:contentDescription="@string/placeholder" />
-    
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene2"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t" />
+
     <ImageView
         android:id="@+id/gene4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/gene3"
-        android:layout_marginLeft="65dp"
         android:layout_alignTop="@+id/gene1"
-        android:src="@drawable/gene_t"
-        android:visibility="invisible"
-        android:contentDescription="@string/placeholder" />
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene3"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t" />
+
+    <ImageView
+        android:id="@+id/gene5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gene1"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene4"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t" />
+
+    <ImageView
+        android:id="@+id/gene6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gene1"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene5"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t" />
+
+    <ImageView
+        android:id="@+id/gene1_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/gene2_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gene1_ans"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene1_ans"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/gene3_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gene1_ans"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene2_ans"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/gene4_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gene1_ans"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene3_ans"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/gene5_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gene1_ans"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene4_ans"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/gene6_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gene1_ans"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/gene5_ans"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/base_t"
+        android:visibility="invisible" />
 
 </RelativeLayout>

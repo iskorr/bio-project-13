@@ -18,11 +18,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Level1Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            android:name=".Level1Activity"
+            android:label="@string/app_name">
         </activity>
     </application>
 

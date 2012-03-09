@@ -16,8 +16,15 @@ import android.widget.TextView;
 public class Level1Activity extends Activity {
 	/* Set of properties used in the Replication Level */
 
-	// Maximum number of elements (multiple of 6)
-	private final int ELEM_NUM = 6;						
+	/* Constants */
+	private final int DELAY = 1000;
+	private final int TIME_LIMIT = 120;
+	private final int PENALTY = 5;
+	private final int ELEM_NUM = 6;
+	private final int C_BASE = 0;
+	private final int G_BASE = 1;
+	private final int A_BASE = 2;
+	private final int T_BASE = 3;
 
 	// Set of given genes sequence (pointers to ImageViews)
 	private ImageView[] genes;
@@ -45,6 +52,16 @@ public class Level1Activity extends Activity {
 
 	// Timer
     private Handler handler;
+    
+    // The game loop
+    private Runnable run_seq;
+    
+    // The score
+    private int score;
+    
+    // The timer and score displays
+    private TextView time_disp;
+    private TextView score_disp;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -59,33 +76,36 @@ public class Level1Activity extends Activity {
 	// Variables' initialisation
 	private void initialise() {
 		res = this.getResources();
+		time_disp = (TextView) findViewById(R.id.time);
+		score_disp = (TextView) findViewById(R.id.score);
 		genes = new ImageView[6];
 		genes_ans = new ImageView[6];
 		sequence = new int[ELEM_NUM];
 		gen = new Random();
-		timeleft = 120;
+		timeleft = TIME_LIMIT;
+		score = 0;
 		old_time = System.currentTimeMillis();
 		handler = new Handler();
-		Runnable r = new Runnable() {
+		run_seq = new Runnable() {
 			@Override
 			public void run() {
 				if ( timeleft > 0 ) {
 					long curr = System.currentTimeMillis();
 					long diff = curr - old_time;
-					while (diff > 1000) {
+					while (diff > DELAY) {
 						timeleft--;
-						diff-=1000;
+						diff-=DELAY;
 					}
-					showTime((TextView) findViewById(R.id.time));
+					showTime(timeleft);
 					old_time = curr;
 					handler.removeCallbacks(this);
-					handler.postDelayed(this, 1000);
+					handler.postDelayed(this, DELAY);
 				} else {
 					endLevel();
 				}
 			}
 		};
-		handler.postDelayed(r, 1000);
+		handler.postDelayed(run_seq, DELAY);
 	}
 
 	// Sequence generation
@@ -105,7 +125,7 @@ public class Level1Activity extends Activity {
 		genes[3] = (ImageView) findViewById(R.id.gene4);
 		genes[4] = (ImageView) findViewById(R.id.gene5);
 		genes[5] = (ImageView) findViewById(R.id.gene6);
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < ELEM_NUM; i++) {
 			if (sequence[i] == 0) genes[i].setImageDrawable(res.getDrawable(R.drawable.base_c));
 			else if (sequence[i] == 1) genes[i].setImageDrawable(res.getDrawable(R.drawable.base_g));
 			else if (sequence[i] == 2) genes[i].setImageDrawable(res.getDrawable(R.drawable.base_a));
@@ -117,7 +137,7 @@ public class Level1Activity extends Activity {
 		genes_ans[3] = (ImageView) findViewById(R.id.gene4_ans);
 		genes_ans[4] = (ImageView) findViewById(R.id.gene5_ans);
 		genes_ans[5] = (ImageView) findViewById(R.id.gene6_ans);
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < ELEM_NUM; i++) {
 			if (sequence[i] == 0) genes_ans[i].setImageDrawable(res.getDrawable(R.drawable.base_g));
 			else if (sequence[i] == 1) genes_ans[i].setImageDrawable(res.getDrawable(R.drawable.base_c));
 			else if (sequence[i] == 2) genes_ans[i].setImageDrawable(res.getDrawable(R.drawable.base_t));
@@ -136,11 +156,13 @@ public class Level1Activity extends Activity {
 		buttonA.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if (sequence[current] == 3) {
+				if (sequence[current] == T_BASE) {
 					genes_ans[current].setVisibility(View.VISIBLE);
 					current++;
+					score++;
+					showScore();
 				} else {
-					timeleft -= 5;
+					timeleft -= PENALTY;
 				}
 				if (current >= ELEM_NUM) {
 					generateSequence();
@@ -150,11 +172,13 @@ public class Level1Activity extends Activity {
 		buttonT.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if (sequence[current] == 2) {
+				if (sequence[current] == A_BASE) {
 					genes_ans[current].setVisibility(View.VISIBLE);
 					current++;
+					score++;
+					showScore();
 				} else {
-					timeleft -= 5;
+					timeleft -= PENALTY;
 				}
 				if (current >= ELEM_NUM) {
 					generateSequence();
@@ -164,11 +188,13 @@ public class Level1Activity extends Activity {
 		buttonG.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if (sequence[current] == 0) {
+				if (sequence[current] == C_BASE) {
 					genes_ans[current].setVisibility(View.VISIBLE);
 					current++;
+					score++;
+					showScore();
 				} else {
-					timeleft -= 5;
+					timeleft -= PENALTY;
 				}
 				if (current >= ELEM_NUM) {
 					generateSequence();
@@ -178,11 +204,13 @@ public class Level1Activity extends Activity {
 		buttonC.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if (sequence[current] == 1) {
+				if (sequence[current] == G_BASE) {
 					genes_ans[current].setVisibility(View.VISIBLE);
 					current++;
+					score++;
+					showScore();
 				} else {
-					timeleft -= 5;
+					timeleft -= PENALTY;
 				}
 				if (current >= ELEM_NUM) {
 					generateSequence();
@@ -192,22 +220,29 @@ public class Level1Activity extends Activity {
 	}
 
 	// Method for time update
-	public void showTime(TextView time) {
+	public void showTime(int timeleft) {
 		int a = timeleft%60;
-		if (a < 10) time.setText((timeleft/60) + ":0" + a);
-		else time.setText((timeleft/60) + ":" + a);
+		if (a < 10) time_disp.setText((timeleft/60) + ":0" + a);
+		else time_disp.setText((timeleft/60) + ":" + a);
+	}
+	
+	// Method for score update
+	public void showScore() {
+		score_disp.setText("SCORE: " + score);
 	}
 
 	// Finish game
 	public void endLevel() {
+		showTime(0);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage("The level has finished")
+		builder.setMessage("The level has finished, your score is " + score)
 		       .setCancelable(false)
-		       .setPositiveButton("Proceed", new DialogInterface.OnClickListener() {
+		       .setNeutralButton("Proceed", new DialogInterface.OnClickListener() {
 		           public void onClick(DialogInterface dialog, int id) {
 		                Level1Activity.this.finish();
 		           }
 		       });
-		builder.create();
+		AlertDialog alert = builder.create();
+		alert.show();
 	}
 }

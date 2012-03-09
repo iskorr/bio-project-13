@@ -17,4 +17,26 @@
         android:contentDescription="@string/placeholder"
         android:src="@drawable/back_button" />
 
+    <ToggleButton
+        android:id="@+id/sound_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/back_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:textOn=""
+        android:textOff=""
+        android:background="@drawable/sound_check_button" />
+    
+    <TextView 
+        android:id="@+id/sound_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/sound_check"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="47dp"
+        android:text="@string/sound_setting"
+        android:textSize="20dp"
+        android:textColor="#ffffff"/>
 </RelativeLayout>

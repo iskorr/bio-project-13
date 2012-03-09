@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"    
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:background="@drawable/level2_background">
+	
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="0.25" >
+        <TextView 
+            android:id="@+id/textview"
+            android:textSize="30sp"
+            android:text="@string/level2sequence"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.67" />
+        <TextView 
+            android:textSize="30sp"  
+		    android:text="@string/timer"  
+		    android:id="@+id/timer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+			android:layout_gravity="top|right"/>		 
+    </LinearLayout>   
+	
+    <LinearLayout 
+        android:layout_height="wrap_content"
+    	android:layout_width="match_parent"
+    	android:layout_weight="0.25">
+
+	    <EditText
+	        android:id="@+id/edittext"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="" />
+
+    </LinearLayout>  
+    
+    <LinearLayout 
+        android:layout_height="wrap_content"
+    	android:layout_width="match_parent"
+    	android:layout_weight="0.25">
+	    
+	    <TextView 
+	        android:id="@+id/feedback"
+	        android:text=""
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        />
+    </LinearLayout> 
+    
+	<LinearLayout 
+        android:layout_height="wrap_content"
+    	android:layout_width="match_parent"
+    	android:layout_weight="0.25">
+	    <Button
+	    android:id="@+id/button1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight=".25"
+	    android:onClick="ClickHandler"
+	    android:text="G" />
+		<Button
+		    android:id="@+id/button2"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight=".25"
+		    android:onClick="ClickHandler"
+		    android:text="C" />
+		<Button
+		    android:id="@+id/button3"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight=".25"
+		    android:onClick="ClickHandler"
+		    android:text="A" />    
+		<Button
+		    android:id="@+id/button4"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight=".25"
+		    android:onClick="ClickHandler"
+		    android:text="U" />    
+	</LinearLayout>   
+
+</LinearLayout>

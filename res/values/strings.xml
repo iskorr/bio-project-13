@@ -12,5 +12,8 @@
     <string name="level3">Ribosome Translation</string>
     <string name="timer">0:00</string>
     <string name="score">SCORE: 0</string>
+    <string name="sound_setting">SOUND SETTINGS</string>
+    <string name="level2sequence"/>
+    <string name="level2edittext"/>
 </resources>
 

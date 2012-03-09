@@ -82,7 +82,7 @@ public class Level1Activity extends Activity {
 	// Variables' initialisation
 	private void initialise() {
 		res = this.getResources();
-		mp = MediaPlayer.create(getApplicationContext(), R.raw.tetris);
+		mp = MediaPlayer.create(getApplicationContext(), R.raw.game2);
 		mp.setLooping(true);
 		mp.start();
 		time_disp = (TextView) findViewById(R.id.time);

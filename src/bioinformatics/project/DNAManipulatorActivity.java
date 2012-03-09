@@ -27,21 +27,15 @@ public class DNAManipulatorActivity extends Activity {
     
     public void initialiseMainMenu() {
     	setContentView(R.layout.main_menu);
-    	final Button play = (Button) findViewById(R.id.play_button);
-    	final Button help = (Button) findViewById(R.id.help_button);
-    	final Button tutorial = (Button) findViewById(R.id.tutorial_button);
-    	final Button settings = (Button) findViewById(R.id.settings_button);
+    	final ImageButton play = (ImageButton) findViewById(R.id.play_button);
+    	final ImageButton tutorial = (ImageButton) findViewById(R.id.tutorials_button);
+    	final ImageButton settings = (ImageButton) findViewById(R.id.settings_button);
+    	final ImageButton credits = (ImageButton) findViewById(R.id.credits_button);
     	play.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	initialiseLevelSelector();
             }
         });
-    	help.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View arg0) {
-				initialiseHelpMenu();
-			}
-		});
     	tutorial.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
@@ -52,6 +46,12 @@ public class DNAManipulatorActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				initialiseSettingsMenu();
+			}
+		});
+    	credits.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				initialiseCreditsPage();
 			}
 		});
     }
@@ -70,11 +70,6 @@ public class DNAManipulatorActivity extends Activity {
 		});
     }
     
-    public void initialiseHelpMenu() {
-    	setContentView(R.layout.help_menu);
-    	setBackToMainButton();
-    }
-    
     public void initialiseTutorialPage() {
     	setContentView(R.layout.tutorial_page);
     	setBackToMainButton();
@@ -83,6 +78,11 @@ public class DNAManipulatorActivity extends Activity {
     
     public void initialiseSettingsMenu() {
     	setContentView(R.layout.settings_menu);
+    	setBackToMainButton();
+    }
+    
+    public void initialiseCreditsPage() {
+    	setContentView(R.layout.credits_page);
     	setBackToMainButton();
     }
     

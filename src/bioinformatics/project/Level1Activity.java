@@ -216,7 +216,7 @@ public class Level1Activity extends Activity {
 		showTime(0);
 		mp.stop();
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage("CONGRATULATIONS, 1ST LEVEL FINISHED!\n           YOUR SCORE IS " + score)
+		builder.setMessage("CONGRATULATIONS, 1ST LEVEL FINISHED!\n               YOUR SCORE IS " + score)
 		       .setCancelable(false)
 		       .setNeutralButton("Proceed", new DialogInterface.OnClickListener() {
 		           public void onClick(DialogInterface dialog, int id) {

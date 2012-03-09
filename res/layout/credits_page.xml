@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" 
-    android:background="@drawable/dna_background">
-
+    android:orientation="horizontal"
+    android:background="@drawable/dna_background" >
+    
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
@@ -16,5 +16,6 @@
         android:background="@null"
         android:contentDescription="@string/placeholder"
         android:src="@drawable/back_button" />
+    
 
 </RelativeLayout>

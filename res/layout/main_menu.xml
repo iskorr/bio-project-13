@@ -5,39 +5,42 @@
     android:background="@drawable/dna_background"
     android:orientation="horizontal" >
 
-    <Button
+    <ImageButton
         android:id="@+id/play_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
-        android:text="@string/play" />
+        android:background="@drawable/start_button" 
+        android:contentDescription="@string/placeholder"/>
 
-    <Button
-        android:id="@+id/help_button"
+    <ImageButton
+        android:id="@+id/tutorials_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_below="@+id/play_button"
-        android:layout_marginLeft="77dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/play_button"
-        android:text="@string/help" />
+        android:background="@drawable/tutorials_button"
+        android:contentDescription="@string/placeholder"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/settings_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/help_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp"
-        android:text="@string/settings" />
-
-    <Button
-        android:id="@+id/tutorial_button"
+        android:layout_height="55dp"
+        android:layout_alignBottom="@+id/tutorials_button"
+        android:layout_marginRight="50dp"
+        android:layout_toLeftOf="@+id/play_button"
+        android:background="@drawable/settings_button"
+        android:contentDescription="@string/placeholder"/>
+    
+    <ImageButton
+        android:id="@+id/credits_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/settings_button"
-        android:layout_marginRight="37dp"
-        android:layout_toLeftOf="@+id/settings_button"
-        android:text="@string/tutorial" />
+        android:layout_height="55dp"
+        android:layout_below="@+id/play_button"
+        android:background="@drawable/settings_button"
+        android:contentDescription="@string/placeholder"/>
 
 </RelativeLayout>

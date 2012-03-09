@@ -1,4 +1,4 @@
 # Temporary files #
 *~
-/bin/
-/gen/
+bin/*
+gen/*

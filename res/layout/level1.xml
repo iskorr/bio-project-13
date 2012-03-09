@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/level1_background">
+
 
     <ImageButton
         android:id="@+id/T_button"
@@ -50,127 +52,181 @@
 
     <ImageView
         android:id="@+id/gene1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="146dp"
         android:background="@drawable/base_t"
         android:contentDescription="@string/placeholder" />
 
     <ImageView
         android:id="@+id/gene2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene1"
         android:contentDescription="@string/placeholder"
         android:src="@drawable/base_t" />
 
     <ImageView
         android:id="@+id/gene3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene2"
         android:contentDescription="@string/placeholder"
         android:src="@drawable/base_t" />
 
     <ImageView
         android:id="@+id/gene4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="43dp"
         android:layout_toRightOf="@+id/gene3"
         android:contentDescription="@string/placeholder"
         android:src="@drawable/base_t" />
 
     <ImageView
         android:id="@+id/gene5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene4"
         android:contentDescription="@string/placeholder"
         android:src="@drawable/base_t" />
 
     <ImageView
         android:id="@+id/gene6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene5"
         android:contentDescription="@string/placeholder"
         android:src="@drawable/base_t" />
 
     <ImageView
         android:id="@+id/gene1_ans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="85dp"
         android:contentDescription="@string/placeholder"
-        android:src="@drawable/base_t"
-        android:visibility="invisible" />
+        android:src="@drawable/base_t"/>
 
     <ImageView
         android:id="@+id/gene2_ans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1_ans"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene1_ans"
         android:contentDescription="@string/placeholder"
-        android:src="@drawable/base_t"
-        android:visibility="invisible" />
+        android:src="@drawable/base_t"/>
 
     <ImageView
         android:id="@+id/gene3_ans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1_ans"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene2_ans"
         android:contentDescription="@string/placeholder"
-        android:src="@drawable/base_t"
-        android:visibility="invisible" />
+        android:src="@drawable/base_t"/>
 
     <ImageView
         android:id="@+id/gene4_ans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1_ans"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="43dp"
         android:layout_toRightOf="@+id/gene3_ans"
         android:contentDescription="@string/placeholder"
-        android:src="@drawable/base_t"
-        android:visibility="invisible" />
+        android:src="@drawable/base_t"/>
 
     <ImageView
         android:id="@+id/gene5_ans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1_ans"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene4_ans"
         android:contentDescription="@string/placeholder"
-        android:src="@drawable/base_t"
-        android:visibility="invisible" />
+        android:src="@drawable/base_t"/>
 
     <ImageView
         android:id="@+id/gene6_ans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/gene1_ans"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="42dp"
         android:layout_toRightOf="@+id/gene5_ans"
         android:contentDescription="@string/placeholder"
-        android:src="@drawable/base_t"
-        android:visibility="invisible" />
+        android:src="@drawable/base_t" />
+    
+    <ImageView 
+        android:id="@+id/arrow1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="47dp"
+        android:src="@drawable/red_arrow"
+        android:contentDescription="@string/placeholder"
+        />
+    <ImageView 
+        android:id="@+id/arrow2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/arrow1"
+        android:layout_toRightOf="@+id/arrow1"
+        android:layout_marginLeft="52dp"
+        android:src="@drawable/red_arrow"
+        android:contentDescription="@string/placeholder"
+        />
+    <ImageView 
+        android:id="@+id/arrow3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/arrow1"
+        android:layout_toRightOf="@+id/arrow2"
+        android:layout_marginLeft="52dp"
+        android:src="@drawable/red_arrow"
+        android:contentDescription="@string/placeholder"
+        />
+    <ImageView 
+        android:id="@+id/arrow4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/arrow1"
+        android:layout_toRightOf="@+id/arrow3"
+        android:layout_marginLeft="52dp"
+        android:src="@drawable/red_arrow"
+        android:contentDescription="@string/placeholder"
+        />
+    <ImageView 
+        android:id="@+id/arrow5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/arrow1"
+        android:layout_toRightOf="@+id/arrow4"
+        android:layout_marginLeft="52dp"
+        android:src="@drawable/red_arrow"
+        android:contentDescription="@string/placeholder"
+        />
+    <ImageView 
+        android:id="@+id/arrow6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/arrow1"
+        android:layout_toRightOf="@+id/arrow5"
+        android:layout_marginLeft="53dp"
+        android:src="@drawable/red_arrow"
+        android:contentDescription="@string/placeholder"
+        />
 
     <TextView
         android:id="@+id/time"
@@ -180,14 +236,14 @@
         android:text="@string/timer"
         android:textColor="#ffffff"
         android:textSize="18dp"/>
-    
     <TextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/time"
         android:text="@string/score"
         android:textColor="#ffffff"
-        android:textSize="18dp"/>
+        android:textSize="18dp" />
     
 </RelativeLayout>

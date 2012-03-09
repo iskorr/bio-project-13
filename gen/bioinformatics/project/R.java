@@ -120,10 +120,7 @@ public final class R {
         public static final int tutorial_page=0x7f030007;
     }
     public static final class raw {
-        public static final int background=0x7f040000;
-        public static final int game2=0x7f040001;
-        public static final int tetris=0x7f040002;
-        public static final int tutorial=0x7f040003;
+        public static final int tetris=0x7f040000;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
